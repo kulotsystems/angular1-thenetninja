@@ -9,9 +9,10 @@
 </head>
 <body>
     <div ng-controller="NinjaController">
+        <input type="text" ng-model="search" placeholder="Search ninja">
         <ul>
-            <li ng-repeat="ninja in ninjas">
-                {{ ninja }}
+            <li ng-repeat="ninja in ninjas | orderBy: '-name' | filter: search">
+                {{ ninja.name }} - {{ ninja.rate | currency: '₱' }}
             </li>
         </ul>
     </div>
