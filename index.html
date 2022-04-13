@@ -5,13 +5,15 @@
     <title>TheNetNinja Angular Playlist</title>
     <link rel="stylesheet" href="content/styles.css">
     <script src="app/lib/angular.min.js"></script>
+    <script src="app/app.js"></script>
 </head>
-<body ng-init="ninjas = ['yoshi', 'crystal', 'ryu', 'shaun']">
-    <input type="text" ng-model="favMeat" placeholder="Enter your fav meat">
-    <ul>
-       <li ng-repeat="ninja in ninjas">
-           {{ ninja }}
-       </li>
-    </ul>
+<body>
+    <div ng-controller="NinjaController">
+        <ul>
+            <li ng-repeat="ninja in ninjas">
+                {{ ninja }}
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

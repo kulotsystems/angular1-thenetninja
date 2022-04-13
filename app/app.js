@@ -1,9 +1,8 @@
 var myNinjaApp = angular.module('myNinjaApp', []);
 
-myNinjaApp.config(function() {
+myNinjaApp.controller('NinjaController', ['$scope', function($scope) {
 
-});
+    $scope.message = "hey y'all";
 
-myNinjaApp.run(function() {
-
-});
+    $scope.ninjas = ['yoshi', 'crystal', 'ryu', 'shaun'];
+}]);
