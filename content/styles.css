@@ -1,5 +1,5 @@
 body{
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -53,6 +53,7 @@ main{
 
 .content{
     padding: 20px;
+    overflow: hidden;
 }
 
 .content button,
@@ -117,4 +118,38 @@ main{
     color: crimson;
     cursor: pointer;
     margin-left: 10px;
+}
+
+
+/* VIEW ENTER ANIMATION */
+main.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+main.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+
+/* NINJA LIST ENTER ANIMATION */
+#ninja-list li.ng-enter {
+    transition: 0.2s linear all;
+    opacity: 0;
+    transform: translateY(30px);
+}
+#ninja-list li.ng-enter.ng-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* NINJA LIST LEAVE ANIMATION */
+#ninja-list li.ng-leave {
+    transition: 0.2s linear all;
+    opacity: 1;
+    transform: translateX(0);
+}
+#ninja-list li.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: translateX(-100%);
 }
