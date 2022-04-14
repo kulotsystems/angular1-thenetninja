@@ -4,7 +4,7 @@ This project is built from [AngularJS 1 Tutorials by **TheNetNinja**](https://ww
 ### Installation
 Clone or download this repository to your local web server's root directory.
 
-Its path should be `/angular1-thenetninja`, to be accessed in the following URL:
+Its path should be `/angular1-thenetninja`, to be accessed in this URL:
 ```
 http://localhost/angular1-thenetninja
 ```
