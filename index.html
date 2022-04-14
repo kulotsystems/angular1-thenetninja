@@ -5,31 +5,11 @@
     <title>TheNetNinja Angular Playlist</title>
     <link rel="stylesheet" href="content/styles.css">
     <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/angular-route.min.js"></script>
     <script src="app/app.js"></script>
 </head>
 <body>
     <header ng-include="'header.html'"></header>
-    <div class="content">
-        <div ng-controller="NinjaController">
-            <button ng-click="order = 'name'">Order by Name</button>
-            <button ng-click="order = 'belt'">Order by Belt</button>
-            <input type="text" ng-model="search" placeholder="Search for ninja">
-            <ul>
-                <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
-                    <img ng-src="{{ ninja.thumb }}" ng-show="ninja.thumb" alt="Ninja photo" style="margin: -12px 10px 0 0; float: left; width: 50px;">
-                    <h3>{{ ninja.name }} - {{ ninja.rate | currency: '₱' }}</h3>
-                    <div class="remove" ng-click="removeNinja(ninja)">&times;</div>
-                    <span class="belt" style="background: {{ ninja.belt }}">{{ ninja.belt }}</span>
-                </li>
-            </ul>
-
-            <form ng-submit="addNinja()">
-                <input type="text" placeholder="Name" ng-model="newNinja.name">
-                <input type="text" placeholder="Belt" ng-model="newNinja.belt">
-                <input type="text" placeholder="Rate" ng-model="newNinja.rate">
-                <input type="submit" value="Add new ninja">
-            </form>
-        </div>
-    </div>
+    <main ng-view></main>
 </body>
 </html>
