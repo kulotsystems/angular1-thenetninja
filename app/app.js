@@ -24,12 +24,14 @@ myNinjaApp.config(['$routeProvider', function($routeProvider) {
 // CUSTOM DIRECTIVE
 myNinjaApp.directive('randomNinja', [function() {
     return {
-        restrict: 'E',  // as an "element"
+        restrict: 'E',     // as an "element"
         scope   : {
-            ninjas: '=', // set "equal" to passed "ninjas" property in the element
-            title : '='  // set "equal" to passed "title"  property in the element
+            ninjas: '=',   // set "equal" to passed "ninjas" property in the element
+            title : '='    // set "equal" to passed "title"  property in the element
         },
         templateUrl: 'views/random.html',
+        transclude : true, // enables nesting of child elements
+        replace    : true, // makes the outer-most element as the template tag
         controller : function($scope) {
             $scope.random = Math.floor(Math.random() * 4);
         }
