@@ -49,6 +49,11 @@ myNinjaApp.controller('NinjaController', ['$scope', '$http', function($scope, $h
         $scope.ninjas.splice(removedNinja, 1);
     };
 
+    // METHOD :: REMOVE ALL NINJAS
+    $scope.removeAll = function() {
+        $scope.ninjas = [];
+    };
+
     // METHOD :: ADD NINJA
     $scope.addNinja = function() {
         $scope.ninjas.push({

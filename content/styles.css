@@ -143,6 +143,7 @@ main.ng-enter.ng-enter-active {
 }
 
 
+
 /* NINJA LIST LEAVE ANIMATION */
 #ninja-list li.ng-leave {
     transition: 0.2s linear all;
@@ -152,4 +153,11 @@ main.ng-enter.ng-enter-active {
 #ninja-list li.ng-leave.ng-leave-active {
     opacity: 0;
     transform: translateX(-100%);
+}
+
+
+/* NINJA LIST LEAVE ANIMATION :: STAGGER EFFECT */
+#ninja-list li.ng-leave-stagger {
+    transition-delay: 0.1s;
+    transition-duration: 0;
 }

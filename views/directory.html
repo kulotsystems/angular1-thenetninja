@@ -2,6 +2,7 @@
     <button ng-click="order = 'name'">Order by Name</button>
     <button ng-click="order = 'belt'">Order by Belt</button>
     <input type="text" ng-model="search" placeholder="Search for ninja">
+
     <ul id="ninja-list">
         <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
             <img ng-src="{{ ninja.thumb }}" ng-show="ninja.thumb" alt="Ninja photo" style="margin: -12px 10px 0 0; float: left; width: 50px;">
@@ -17,4 +18,6 @@
         <input type="text" placeholder="Rate" ng-model="newNinja.rate">
         <input type="submit" value="Add new ninja">
     </form>
+
+    <a href="" ng-click="removeAll()">Remove all ninjas</a>
 </div>
